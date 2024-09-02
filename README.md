@@ -39,8 +39,8 @@ Shypple is a Ruby application that helps you find the best shipping routes betwe
 2. Follow the prompts to enter the origin port, destination port, and search type.
 
 ### Example
-    Enter origin port: NYC
-    Enter destination port: LON
+    Enter origin port: CNSHA
+    Enter destination port: NLRTM
     Enter search type (cheapest-direct, cheapest, fastest): cheapest
 
 ## Docker
