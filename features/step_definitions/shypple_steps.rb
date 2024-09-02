@@ -10,8 +10,15 @@ When('I input {string}') do |input|
   @stdin.puts(input)
 end
 
-Then('I should see {string}') do |expected_output|
+Then('I should see the following keywords:') do |table|
   @stdin.close
-  output = @stdout.read
-  expect(output).to include(expected_output)
+  actual_output = @stdout.read
+
+  # Extract keywords from the table
+  keywords = table.raw.flatten
+
+  # Check if each keyword is included in the actual output
+  keywords.each do |keyword|
+    expect(actual_output).to include(keyword)
+  end
 end
